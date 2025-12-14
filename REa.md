@@ -78,15 +78,3 @@ class Person:
     def create_email(self, domain="company.com"):
         return f"{self.name.lower()}@{domain}"
 
-# Приклад використання
-p1 = Person("іван")
-p2 = Person(None)
-print(p1.say_hello())              # Greetings! I am Ivan, pleased to meet you.
-print(p1.count_name_letters())     # 4
-print(p2.create_email("mail.net")) # anonymous@mail.net
-
-# Обробка помилки:
-try:
-    p3 = Person("Kate123")
-except ValueError as e:
-    print(f"Помилка: {e}")        # Помилка: Ім'я не повинно містити цифр або символів!
